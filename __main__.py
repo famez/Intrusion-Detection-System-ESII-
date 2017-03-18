@@ -328,7 +328,7 @@ class IDS():
         ts = time.time()
         st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
         try:
-            file_read = open('/var/log/ids.txt', 'w+')
+            file_read = open('/var/log/ids.txt', 'a+')
             file_read.write('['+st+'] '+log+"\n")
             file_read.close()
         except IOError:
